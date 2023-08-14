@@ -1,0 +1,138 @@
+/* start var  */
+/* :root {
+  --transition: 0.3s;
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --grey-color: #888;
+} */
+/* end var  */
+* {
+  box-sizing: border-box;
+}
+.page {
+  background-color: #f1f5f9;
+  min-height: 101vh;
+}
+/* start sidebar  */
+.sidebar {
+  width: 250px;
+}
+@media (min-width: 768px) {
+  .sidebar > h3::before,
+  .sidebar > h3::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .sidebar > h3::before {
+    width: 80px;
+    height: 2px;
+    bottom: -20px;
+  }
+  .sidebar > h3::after {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    bottom: -29px;
+    border: 4px solid white;
+  }
+}
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background-color: #f6f6f6;
+}
+.sidebar ul li a {
+  margin-bottom: 5px;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+.sidebar ul li a span {
+  margin-left: 10px;
+  font-size: 14px;
+}
+@media (max-width: 767px) {
+  .sidebar {
+    width: 58px;
+    padding: 10px;
+  }
+  .sidebar > h3 {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  .sidebar ul li a span {
+    display: none;
+  }
+}
+.sidebar ul li a i {
+  font-weight: bold;
+}
+/* end sidebar  */
+/* start contant */
+.content .head .search::before {
+  content: "\f002";
+  font-family: var(--fa-style-family-classic);
+  position: absolute;
+  font-weight: 900;
+  top: 50%;
+  left: 12px;
+  font-size: 14px;
+  color: var(--grey-color);
+  transform: translatey(-50%);
+}
+.content .head input[type="search"]:focus {
+  width: 220px;
+}
+.content .head input[type="search"]:focus::placeholder {
+  opacity: 0;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+.content .head .icons span::before {
+  position: absolute;
+  content: "";
+  background-color: var(--red-color);
+  width: 8px;
+  height: 8px;
+  right: -5px;
+  top: -5px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+h1::before,
+h1::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 3px;
+  border-radius: 10px;
+}
+h1::before {
+  width: 140px;
+  background: white;
+}
+h1::after {
+  background-color: black;
+  width: 100px;
+}
+.wellcome a:hover{
+  background-color: var(--blue-alt-color);
+}
+.tasks i:hover{
+color: var(--red-color);
+}
+/* end contant */
